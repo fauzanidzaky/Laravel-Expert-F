@@ -1,0 +1,400 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+span {
+    color: #2c3e50; /* Mengubah aksen warna ke biru gelap industri */
+}
+
+.navbar span {
+    color: #e74c3c; /* Aksen merah teknik */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 75vh;
+    /* Background bertema workstation/mesin teknologi */
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.hero-content h1 span {
+    color: #1abc9c; /* Warna teks mengetik hijau toska cerah */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Sections General */
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    color: #2c3e50;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e74c3c;
+    margin: 10px auto 0;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+}
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.service-card {
+    padding: 35px 25px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 4px solid #2c3e50;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.service-card:hover {
+    border-top-color: #e74c3c;
+}
+
+.service-card .icon {
+    font-size: 36px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Skills & Chart */
+.skills {
+    background-color: #fff;
+}
+.subtitle {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 45vh;
+    width: 80vw;
+    max-width: 700px;
+}
+
+/* Contact */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fdfdfd;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* Atur container gambar agar seragam dan rata tengah */
+.custom-service-img {
+    width: 80px;            /* Atur lebar gambar (misal: 80px) agar seragam */
+    height: 80px;           /* Atur tinggi gambar sama dengan lebar agar kotak/bundar */
+    object-fit: cover;      /* Sangat penting! Gambar akan di-*crop* agar pas kotak, tidak gepeng */
+    border-radius: 50%;     /* Optional: Membuat gambar menjadi bundar seperti icon sebelumnya */
+    border: 3px solid #2c3e50; /* Optional: Menambahkan frame lingkaran di sekeliling gambar */
+    margin-bottom: 20px;     /* Memberikan jarak ke judul di bawahnya */
+    display: block;          /* Memastikan marjin otomatis bekerja */
+    margin-left: auto;       /* Mengetengahkan gambar secara horizontal */
+    margin-right: auto;
+}
+
+/* ==========================================
+   STYLE UNTUK MODAL RATING & KOMENTAR
+   ========================================== */
+
+/* Tombol Utama */
+.btn-rating {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-rating:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+/* Background Modal (Gelap Transparan) */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 2000; /* Di atas navbar */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kotak Konten Pop-up */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: center;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Tombol Tutup (X) */
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Logika Sistem Bintang (Mundur agar hover efek bekerja dari kiri ke kanan) */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    font-size: 35px;
+    color: #ddd;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: 0.2s;
+}
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f1c40f;
+}
+
+/* Form di dalam Modal */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+    font-size: 14px;
+}
+
+/* Kustom Tombol Unggah Gambar */
+.file-upload-wrapper input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eaedd0;
+    color: #555;
+    border: 1px dashed #27ae60;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    transition: 0.3s;
+}
+.custom-file-upload:hover {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+/* Pratinjau Foto */
+.image-preview-box {
+    margin-top: 10px;
+    max-height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.image-preview-box img {
+    max-height: 120px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-submit-rating {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.btn-submit-rating:hover {
+    background-color: #1a252f;
+}
+
