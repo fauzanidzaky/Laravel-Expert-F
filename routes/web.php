@@ -35,3 +35,6 @@ Route::get('/my-todo', function () {
     return view('tugas'); // Cukup panggil file anaknya saja
 });
 
+Route::get('/myyy', function () {
+    return view('tugas'); // Cukup panggil file anaknya saja
+});
